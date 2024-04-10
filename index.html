@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            بحبكك
+        </title>
+        <style>
+            h1{
+                font-size: 100px;
+                font-family: "Reem Kufi Fun", sans-serif;
+                font-optical-sizing: auto;
+                font-weight: normal;
+                font-style: normal;
+                text-align: center;
+            }
+            img{
+                border-image: linear-gradient(blue, red) 1;
+                border: 5px solid red;
+                border-radius: 20px;
+                position: relative;
+            }
+            .image-container {
+                position: relative;
+            }
+            .heart {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                opacity: 0;
+                transition: opacity 0.3s ease-in-out;
+                font-size: 50px; /* Adjust heart size as needed */
+                color: red;
+            }
+        </style>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Reem+Kufi+Fun:wght@400..700&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <h1>بحبك يا جنجونتي</h1>
+        <img class="image" src="./e0e869d8-580b-4215-b023-032a7dd9d76d.jpg"/>
+        <div class="image-container">
+            <span class="heart">❤️</span>
+        </div>
+    
+        <script>
+            const image = document.querySelector('.image');
+            const heart = document.querySelector('.heart');
+    
+            image.addEventListener('click', () => {
+                heart.style.opacity = 1;
+                setTimeout(() => {
+                    heart.style.opacity = 0;
+                }, 1000); // Adjust animation duration (in milliseconds)
+            });
+        </script>
+    </body>
+</html>
